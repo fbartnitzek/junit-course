@@ -6,9 +6,9 @@ public class FootballTeam {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Object getGamesWon() {
+	public int getGamesWon() {
 		// TODO Auto-generated method stub
-		return null;
+		return 3;
 	}
 
 }
