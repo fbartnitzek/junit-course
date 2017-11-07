@@ -40,9 +40,25 @@ public class TicTacToe {
 			return board[0][0];
 		} else if (board[0][2] != '\0' && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
 			return board[0][2];
-		}		
+		}
+		
+		if (allFilled()) {
+			return 'D';
+		}
+		
 		
 		return '\0';
+	}
+	
+	private boolean allFilled() {
+		boolean emptyExists = false;
+
+		for (int i=0; i<SIZE; i++) {
+			for (int j=0; j<SIZE; j++) {
+				emptyExists |= board[i][j] == '\0'; 
+			}
+		}
+		return !emptyExists;
 	}
 
 
