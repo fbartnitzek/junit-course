@@ -8,7 +8,7 @@ public class TicTacToe {
 								{'\0', '\0', '\0'}};// 20, 21, 22
 	private char lastPlayer = '\0';
 
-	public void play(int x, int y) {
+	public char play(int x, int y) {
 		checkAxis(x);
 		checkAxis(y);
 		if (board[x-1][x-y] != '\0') {
@@ -16,6 +16,7 @@ public class TicTacToe {
 		}
 		lastPlayer = getNextPlayer();
 		board[x-1][y-1] = lastPlayer;
+		return ' ';
 	}
 
 	private void checkAxis(int x) {
@@ -26,6 +27,11 @@ public class TicTacToe {
 
 	public char getNextPlayer() {
 		return this.lastPlayer == 'X' ? 'O' : 'X';
+	}
+
+	public char getWinner() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

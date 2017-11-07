@@ -51,5 +51,12 @@ public class TicTacToeTest {
 //		char nextPlayer = ticTacToe.getNextPlayer();
 //		assertEquals('X', nextPlayer);
 //	}
+	
+	@Test
+	public void testIfNoWinningConditionIsFulfilledThenNoWinner() {
+		char winner = ticTacToe.play(1, 1);
+		assertEquals('\0', winner);
+	}
+	
 
 }
