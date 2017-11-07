@@ -22,4 +22,9 @@ public class TicTacToe {
 		}
 	}
 
+	public char getNextPlayer() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
