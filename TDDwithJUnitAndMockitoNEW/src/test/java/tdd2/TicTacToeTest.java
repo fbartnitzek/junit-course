@@ -14,5 +14,12 @@ public class TicTacToeTest {
 		catchException(ticTacToe).play(4, 2);
 		assertTrue(caughtException() instanceof RuntimeException);
 	}
+	
+	@Test
+	public void testPiecePlacedOutsideYaxisThenRuntimeException() {
+		TicTacToe ticTacToe = new TicTacToe();
+		catchException(ticTacToe).play(2, 4);
+		assertTrue(caughtException() instanceof RuntimeException);
+	}
 
 }
