@@ -20,8 +20,7 @@ public class TicTacToe {
 	}
 
 	private char getWinner() {
-		char winner = '\0';
-		
+
 		// horizontal check
 		for (int i=0; i<SIZE; i++) {
 			if (board[i][0] != '\0' && board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
@@ -36,8 +35,14 @@ public class TicTacToe {
 			}
 		}
 		
+		// diagonal check
+		if (board[0][0] != '\0' && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+			return board[0][0];
+		} else if (board[0][2] != '\0' && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
+			return board[0][2];
+		}		
 		
-		return winner;
+		return '\0';
 	}
 
 
