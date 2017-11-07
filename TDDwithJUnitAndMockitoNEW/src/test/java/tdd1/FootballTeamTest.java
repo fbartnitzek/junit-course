@@ -1,6 +1,7 @@
 package tdd1;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,6 +35,13 @@ public class FootballTeamTest {
 	
 	private static Object[] getNegativeGamesWon() {
 		return new Object[]{-1, -12,- 3871};
+	}
+	
+	@Test
+	public void testIsComparable() {
+		FootballTeam team = new FootballTeam(GAMES_WON);
+		
+		assertTrue("does not implement Comparable", team instanceof Comparable);
 	}
 
 }
