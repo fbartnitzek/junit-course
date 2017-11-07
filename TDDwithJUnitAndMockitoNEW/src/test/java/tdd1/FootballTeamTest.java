@@ -43,5 +43,14 @@ public class FootballTeamTest {
 		
 		assertTrue("does not implement Comparable", team instanceof Comparable);
 	}
+	
+	@Test
+	public void teamWithMoreMatchesWonShouldBeGreater() {
+		FootballTeam team_3gamesWon = new FootballTeam(3);
+		FootballTeam team_2gamesWon = new FootballTeam(2);
+		
+		assertTrue("team with 3 games won should be greater than team with 2 games won",
+				team_3gamesWon.compareTo(team_2gamesWon) > 0);
+	}
 
 }
