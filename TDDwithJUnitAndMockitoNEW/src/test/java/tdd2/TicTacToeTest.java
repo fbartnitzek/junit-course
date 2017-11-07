@@ -86,6 +86,19 @@ public class TicTacToeTest {
 		assertEquals('O', ticTacToe.play(3, 3));	// O wins with [ii]
 	}
 	
+	@Test
+	public void testDrawForNoWinner() {
+		assertEquals('\0', ticTacToe.play(1, 2));	// X
+		assertEquals('\0', ticTacToe.play(1, 1));	// O
+		assertEquals('\0', ticTacToe.play(2, 1));	// X
+		assertEquals('\0', ticTacToe.play(1, 3));	// O
+		assertEquals('\0', ticTacToe.play(2, 3));	// X
+		assertEquals('\0', ticTacToe.play(2, 2));	// O
+		assertEquals('\0', ticTacToe.play(3, 1));	// X
+		assertEquals('\0', ticTacToe.play(3, 2));	// O
+		assertEquals('D', ticTacToe.play(3, 3));	// X wins with [ii]
+	}
+	
 	
 
 }
