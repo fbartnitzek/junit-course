@@ -29,6 +29,13 @@ public class TicTacToe {
 			}
 		}
 		
+		// vertical check
+		for (int i=0; i<SIZE; i++) {
+			if (board[0][i] != '\0' && board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
+				return board[0][i];
+			}
+		}
+		
 		
 		return winner;
 	}
