@@ -16,7 +16,7 @@ public class TicTacToe {
 		}
 		lastPlayer = getNextPlayer();
 		board[x-1][y-1] = lastPlayer;
-		return ' ';
+		return '\0';
 	}
 
 	private void checkAxis(int x) {
