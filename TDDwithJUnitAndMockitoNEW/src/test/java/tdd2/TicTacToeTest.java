@@ -58,5 +58,15 @@ public class TicTacToeTest {
 		assertEquals('\0', winner);
 	}
 	
+	@Test
+	public void testHorizontalLinesForWinner() {
+		ticTacToe.play(1, 1);				// X
+		ticTacToe.play(2, 2);				// O
+		ticTacToe.play(1, 2);				// X
+		ticTacToe.play(2, 2);				// O
+		char winner = ticTacToe.play(1, 3);	// X wins with x=1
+		assertEquals('X', winner);
+	}
+	
 
 }
