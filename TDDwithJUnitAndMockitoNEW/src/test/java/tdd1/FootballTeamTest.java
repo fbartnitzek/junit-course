@@ -63,7 +63,7 @@ public class FootballTeamTest {
 	}
 	
 	@Test
-	public void teamsWithEqualMatchesWonShouldBeEqual() {
+	public void teamsWithSameMatchesWonShouldBeEqual() {
 		FootballTeam team_3gamesWon = new FootballTeam(3);
 		FootballTeam team2_3gamesWon = new FootballTeam(3);
 		
