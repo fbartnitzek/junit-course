@@ -35,5 +35,12 @@ public class TicTacToeTest {
 		char nextPlayer = ticTacToe.getNextPlayer();
 		assertEquals('X', nextPlayer);
 	}
+	
+	@Test
+	public void testIfLastTurnWasXThenNextTurnShouldBeO() {
+		ticTacToe.play(1, 1);
+		char nextPlayer = ticTacToe.getNextPlayer();
+		assertEquals('O', nextPlayer);
+	}
 
 }
