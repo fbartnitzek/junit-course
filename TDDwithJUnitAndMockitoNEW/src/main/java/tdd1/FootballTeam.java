@@ -3,8 +3,8 @@ package tdd1;
 public class FootballTeam {
 	private int gamesWon;
 
-	public FootballTeam(int i) {
-		gamesWon = i;
+	public FootballTeam(int gamesWon) {
+		this.gamesWon = gamesWon;
 	}
 
 	public int getGamesWon() {
