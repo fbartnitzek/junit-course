@@ -1,14 +1,14 @@
 package tdd1;
 
 public class FootballTeam {
+	private int gamesWon;
 
 	public FootballTeam(int i) {
-		// TODO Auto-generated constructor stub
+		gamesWon = i;
 	}
 
 	public int getGamesWon() {
-		// TODO Auto-generated method stub
-		return 3;
+		return gamesWon;
 	}
 
 }
