@@ -100,7 +100,7 @@ public class TicTacToeTest {
 		assertEquals(N, ticTacToe.play(2, 2));	// O
 		assertEquals(N, ticTacToe.play(3, 1));	// X
 		assertEquals(N, ticTacToe.play(3, 2));	// O
-		assertEquals(D, ticTacToe.play(3, 3));	// X wins with [ii]
+		assertEquals(D, ticTacToe.play(3, 3));	// DRAW
 	}
 	
 	
