@@ -21,5 +21,13 @@ public class TicTacToeTest {
 		catchException(ticTacToe).play(2, 4);
 		assertTrue(caughtException() instanceof RuntimeException);
 	}
+	
+	@Test
+	public void testOccupiedSpaceShouldThrowRuntimeException() {
+		TicTacToe ticTacToe = new TicTacToe();
+		ticTacToe.play(1, 1);
+		catchException(ticTacToe).play(1, 1);
+		assertTrue(caughtException() instanceof RuntimeException);
+	}
 
 }
