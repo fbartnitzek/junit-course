@@ -42,5 +42,14 @@ public class TicTacToeTest {
 		char nextPlayer = ticTacToe.getNextPlayer();
 		assertEquals('O', nextPlayer);
 	}
+	
+	// adds nothing new, already fulfilled by previous method
+//	@Test
+//	public void testIfLastTurnWasOThenNextTurnShouldBeX() {
+//		ticTacToe.play(1, 1);
+//		ticTacToe.play(2, 2);
+//		char nextPlayer = ticTacToe.getNextPlayer();
+//		assertEquals('X', nextPlayer);
+//	}
 
 }

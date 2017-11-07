@@ -25,8 +25,7 @@ public class TicTacToe {
 	}
 
 	public char getNextPlayer() {
-		return lastPlayer == 'X' ? 'O' : 'X';
-//		return 'X';
+		return this.lastPlayer == 'X' ? 'O' : 'X';
 	}
 
 }
