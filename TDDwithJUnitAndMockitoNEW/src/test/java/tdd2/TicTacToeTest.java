@@ -4,6 +4,10 @@ import static com.googlecode.catchexception.CatchException.catchException;
 import static com.googlecode.catchexception.CatchException.caughtException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static tdd2.TicTacToe.X;
+import static tdd2.TicTacToe.N;
+import static tdd2.TicTacToe.O;
+import static tdd2.TicTacToe.D;
 
 import org.junit.Test;
 
@@ -33,14 +37,14 @@ public class TicTacToeTest {
 	@Test
 	public void testFirstTurnShouldBePlayedByX() {
 		char nextPlayer = ticTacToe.getNextPlayer();
-		assertEquals('X', nextPlayer);
+		assertEquals(X, nextPlayer);
 	}
 	
 	@Test
 	public void testIfLastTurnWasXThenNextTurnShouldBeO() {
 		ticTacToe.play(1, 1);
 		char nextPlayer = ticTacToe.getNextPlayer();
-		assertEquals('O', nextPlayer);
+		assertEquals(O, nextPlayer);
 	}
 	
 	// adds nothing new, already fulfilled by previous method
@@ -55,48 +59,48 @@ public class TicTacToeTest {
 	@Test
 	public void testIfNoWinningConditionIsFulfilledThenNoWinner() {
 		char winner = ticTacToe.play(1, 1);
-		assertEquals('\0', winner);
+		assertEquals(N, winner);
 	}
 	
 	@Test
 	public void testHorizontalLinesForWinner() {
-		assertEquals('\0', ticTacToe.play(1, 1));	// X
-		assertEquals('\0', ticTacToe.play(2, 2));	// O
-		assertEquals('\0', ticTacToe.play(1, 2));	// X
-		assertEquals('\0', ticTacToe.play(2, 3));	// O
-		assertEquals('X', ticTacToe.play(1, 3));	// X wins with x=1
+		assertEquals(N, ticTacToe.play(1, 1));	// X
+		assertEquals(N, ticTacToe.play(2, 2));	// O
+		assertEquals(N, ticTacToe.play(1, 2));	// X
+		assertEquals(N, ticTacToe.play(2, 3));	// O
+		assertEquals(X, ticTacToe.play(1, 3));	// X wins with x=1
 	}
 	
 	@Test
 	public void testVerticalLinesForWinner() {
-		assertEquals('\0', ticTacToe.play(1, 1));	// X
-		assertEquals('\0', ticTacToe.play(2, 2));	// O
-		assertEquals('\0', ticTacToe.play(2, 1));	// X
-		assertEquals('\0', ticTacToe.play(3, 2));	// O
-		assertEquals('X', ticTacToe.play(3, 1));	// X wins with y=1
+		assertEquals(N, ticTacToe.play(1, 1));	// X
+		assertEquals(N, ticTacToe.play(2, 2));	// O
+		assertEquals(N, ticTacToe.play(2, 1));	// X
+		assertEquals(N, ticTacToe.play(3, 2));	// O
+		assertEquals(X, ticTacToe.play(3, 1));	// X wins with y=1
 	}
 	
 	@Test
 	public void testDiagonalLinesForWinner() {
-		assertEquals('\0', ticTacToe.play(2, 1));	// X
-		assertEquals('\0', ticTacToe.play(1, 1));	// O
-		assertEquals('\0', ticTacToe.play(2, 3));	// X
-		assertEquals('\0', ticTacToe.play(2, 2));	// O
-		assertEquals('\0', ticTacToe.play(1, 2));	// X
-		assertEquals('O', ticTacToe.play(3, 3));	// O wins with [ii]
+		assertEquals(N, ticTacToe.play(2, 1));	// X
+		assertEquals(N, ticTacToe.play(1, 1));	// O
+		assertEquals(N, ticTacToe.play(2, 3));	// X
+		assertEquals(N, ticTacToe.play(2, 2));	// O
+		assertEquals(N, ticTacToe.play(1, 2));	// X
+		assertEquals(O, ticTacToe.play(3, 3));	// O wins with [ii]
 	}
 	
 	@Test
 	public void testDrawForNoWinner() {
-		assertEquals('\0', ticTacToe.play(1, 2));	// X
-		assertEquals('\0', ticTacToe.play(1, 1));	// O
-		assertEquals('\0', ticTacToe.play(2, 1));	// X
-		assertEquals('\0', ticTacToe.play(1, 3));	// O
-		assertEquals('\0', ticTacToe.play(2, 3));	// X
-		assertEquals('\0', ticTacToe.play(2, 2));	// O
-		assertEquals('\0', ticTacToe.play(3, 1));	// X
-		assertEquals('\0', ticTacToe.play(3, 2));	// O
-		assertEquals('D', ticTacToe.play(3, 3));	// X wins with [ii]
+		assertEquals(N, ticTacToe.play(1, 2));	// X
+		assertEquals(N, ticTacToe.play(1, 1));	// O
+		assertEquals(N, ticTacToe.play(2, 1));	// X
+		assertEquals(N, ticTacToe.play(1, 3));	// O
+		assertEquals(N, ticTacToe.play(2, 3));	// X
+		assertEquals(N, ticTacToe.play(2, 2));	// O
+		assertEquals(N, ticTacToe.play(3, 1));	// X
+		assertEquals(N, ticTacToe.play(3, 2));	// O
+		assertEquals(D, ticTacToe.play(3, 3));	// X wins with [ii]
 	}
 	
 	
