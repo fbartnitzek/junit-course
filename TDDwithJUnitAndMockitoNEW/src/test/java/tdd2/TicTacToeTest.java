@@ -63,7 +63,7 @@ public class TicTacToeTest {
 		ticTacToe.play(1, 1);				// X
 		ticTacToe.play(2, 2);				// O
 		ticTacToe.play(1, 2);				// X
-		ticTacToe.play(2, 2);				// O
+		ticTacToe.play(2, 3);				// O
 		char winner = ticTacToe.play(1, 3);	// X wins with x=1
 		assertEquals('X', winner);
 	}

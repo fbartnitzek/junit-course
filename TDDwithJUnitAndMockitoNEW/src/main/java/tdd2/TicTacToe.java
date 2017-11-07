@@ -11,13 +11,28 @@ public class TicTacToe {
 	public char play(int x, int y) {
 		checkAxis(x);
 		checkAxis(y);
-		if (board[x-1][x-y] != '\0') {
+		if (board[x-1][y-1] != '\0') {
 			throw new RuntimeException();
 		}
 		lastPlayer = getNextPlayer();
 		board[x-1][y-1] = lastPlayer;
-		return '\0';
+		return getWinner();
 	}
+
+	private char getWinner() {
+		char winner = '\0';
+		
+		// horizontal check
+		for (int i=0; i<SIZE; i++) {
+			if (board[i][0] != '\0' && board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
+				return board[i][0];
+			}
+		}
+		
+		
+		return winner;
+	}
+
 
 	private void checkAxis(int x) {
 		if (x > SIZE || x < 1) {
@@ -28,10 +43,4 @@ public class TicTacToe {
 	public char getNextPlayer() {
 		return this.lastPlayer == 'X' ? 'O' : 'X';
 	}
-
-	public char getWinner() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }
