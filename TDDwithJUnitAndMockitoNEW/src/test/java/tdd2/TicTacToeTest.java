@@ -68,5 +68,14 @@ public class TicTacToeTest {
 		assertEquals('X', winner);
 	}
 	
+	@Test
+	public void testVerticalLinesForWinner() {
+		ticTacToe.play(1, 1);				// X
+		ticTacToe.play(2, 2);				// O
+		ticTacToe.play(2, 1);				// X
+		ticTacToe.play(3, 2);				// O
+		char winner = ticTacToe.play(3, 1);	// X wins with x=1
+		assertEquals('X', winner);
+	}
 
 }
